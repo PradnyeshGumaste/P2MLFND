@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Test a Perceptual Phenomenon </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <style>
+
+    .answer
+    {
+  	   margin-left: 40px;
+       font-style: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    }
+
+    td, tr
+    {
+      padding: 5px;
+    }
+
+    body
+    {
+      background-image: url(back.jpg);
+    }
+
+    h1
+    {
+      text-align: center;
+    }
+
+    ::-webkit-scrollbar
+    {
+        border-radius: 8px;
+        background-color:#000000;
+    }
+
+    ::-webkit-scrollbar-thumb
+    {
+        border-radius: 10px;
+        background-color:#f7d8d7;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+    </style>
+  </head>
+
+
+
+  <body>
+
+    <div class="container">
+      <h1>Machine Learning Foundations Nanodegree</h1>
+      <h3>P1: Test a Perceptual Phenomenon</h3>
+      <h5>Created by Pradnyesh Gumaste</h5>
+    </div>
+
+    <div class="container">
+      <h3>Background Information</h3>
+        <p>
+  	       In a Stroop task, participants are presented with a list of words, with each word displayed in a color of ink. The participant’s task is to say out loud the color of the ink in which the word is printed. The task has two conditions: a congruent words condition, and an incongruent words condition. In the congruent words condition, the words being displayed are color words whose names match the colors in which they are printed: for example <span style="color:red;">RED</span>, <span style="color:blue;">BLUE</span>. In the incongruent words condition, the words displayed are color words whose names do not match the colors in which they are printed: for example <span style="color:green;">PURPLE</span>, <span style="color:purple;">ORANGE</span>. In each case, we measure the time it takes to name the ink colors in equally-sized lists. Each participant will go through and record a time from each condition.
+        </p>
+    </div>
+
+
+    <div class="container">
+      <h3>Questions For Investigation</h3>
+
+
+        <br>
+        <!--First Question of Investigation for the experiment-->
+        <p>
+          1. What is our independent variable? What is our dependent variable?
+        </p>
+        <p class="answer">
+  	      Independent Variable here, are the words conditions specified, namely :- <br>1. Congruent Words <br>2. Incongruent Words
+           <br><br>Dependent Variable here, is the time it takes to speak out the respective ink colors in lists of words<strong>(All are of equal size)</strong>
+        </p>
+
+        <br>
+        <br>
+        <!--Second Question of Investigation for the experiment-->
+        <p>
+  	       2. What is an appropriate set of hypotheses for this task? What kind of statistical test do you expect to perform? Justify your choices.
+        </p>
+        <p class="answer">
+            In this experiment, the null hypothesis is considered that the mean time for color recognition for congruent words is equal to or greater than the mean time for incongruent words, and hence as a result we need to effectuate the one-tailed test for the experiment. The alternative hypothesis contradicting to the null hypothesis should be that the mean of congruent words is less than the mean of incongruent words.
+        </p>
+
+        <!--Theequations of null hypothesis and alternative hypothesis-->
+        <p class="answer">
+  	         H<sub>0</sub>: μ<sub>C</sub> ≥ μ<sub>I</sub>
+        </p>
+        <p class="answer">
+  	       H<sub>A</sub>: μ<sub>C</sub> &#60; μ<sub>I</sub>
+        </p>
+        <p class="answer">
+  	      where μ is a population mean, "C" represents the congruent words condition while the subscript "I" represents the incongruent words condition.
+        </p>
+
+
+        <p class="answer">
+          One-tailed, dependent samples t-test comparing the difference in means of the time to name the ink colors for congruent words and incongruent words should be performed. By performing this test, we aim to understand and determine whether enough evidence is provided in the data sample provided, to prove and conclude that the congruent words mean color recognition time is less than the incongruent words mean color recognition time for the entire population but not just referring to the given sample of the data.
+        </p>
+        <br>
+
+        <p class="answer">
+          As we have observed during the statistical evaluation of the experiment, it is seen that the sample size is less than 30 and the population variance is unknown as well. Hence, a t-test is the most appropriately suitable for this experiment. The sample data is no longer assumed to be a normal distribution, since the sample size is less than 30, the use of Z-value distribution is inapt.
+          <sup><a href="http://blog.minitab.com/blog/adventures-in-statistics-2/understanding-t-tests-t-values-and-t-distributions" target="_blank">T-test?</a></sup>
+          The following assumptions are required for t-tests for dependent means:<sup><a href="http://www.psychology.emory.edu/clinical/bliwise/Tutorials/TOM/meanstests/assump.htm" target="_blank">Assumptions of T-test?</a></sup>
+          <ol class="answer">
+          <li>Interval or ratio scale of measurement (approximately interval)</li>
+          <li>Random sampling from a defined population</li>
+          <li>Samples or sets of data used to produce the difference scores are linked in the population through repeated measurement, natural association, or matching</li>
+          <li>Scores are normally distributed in the population; difference scores are normally distributed</li>
+        </ol>
+        </p>
+
+        <p class="answer">
+          One-tailed test is apt here under the hypothetical and logical assumption that incongruent word conditions will not improve recognition times. The one-tailed test provides us with better method to thoroughly analyze the negative impact of incongruent word conditions on recognition times.
+        </p>
+
+        <p class="answer">
+          The t-test must be of the dependent samples variety because the same subject is subjected to two conditions and tested for each, which are the defining criteria for "within-subjects" or "repeated-measures" statistical tests.<sup><a href="https://statistics.laerd.com/statistical-guides/dependent-t-test-statistical-guide.php" target="_blank">Dependent t-test?</a></sup>
+        </p>
+
+        <br>
+        <p>
+  	       Now it’s your chance to try out the Stroop task for yourself. Go to <a href="https://faculty.washington.edu/chudler/java/ready.html" target="_blank">this link</a>, which has a Java-based applet for performing the Stroop task. Record the times that you received on the task (you do not need to submit your times to the site.) Now, download <a href="https://drive.google.com/file/d/0B9Yf01UaIbUgQXpYb2NhZ29yX1U/view" target="_blank">this dataset</a> which contains results from a number of participants in the task. Each row of the dataset contains the performance for one participant, with the first number their results on the congruent task and the second number their performance on the incongruent task.
+        </p>
+
+
+        <!--Third Question of Investigation for the experiment-->
+        <p>
+  	       3. Report some descriptive statistics regarding this dataset. Include at least one measure of central tendency and at least one measure of variability.
+         </p>
+
+         <p>
+           <table class="answer" border="1">
+            <tr>
+               <td><b>Statistic</b></td>
+               <td><b>Congruent</b></td>
+               <td><b>Incongruent</b></td>
+               <td><b>Difference (C-I)</b></td>
+            </tr>
+
+            <tr>
+              <td>n</td>
+              <td>24</td>
+              <td>24</td>
+              <td>24</td>
+            </tr>
+
+            <tr>
+              <td>x̄</td>
+              <td>14.05</td>
+              <td>22.02</td>
+              <td>-7.96</td>
+              </tr>
+
+            <tr>
+              <td>Median</td>
+              <td>14.36</td>
+              <td>21.02</td>
+              <td>-7.67</td>
+            </tr>
+
+            <tr>
+              <td>s<sup>2</sup></td>
+              <td>12.67</td>
+              <td>23.01</td>
+              <td>23.67</td>
+            </tr>
+
+            <tr>
+              <td>s</td>
+              <td>3.56</td>
+              <td>4.80</td>
+              <td>4.86</td>
+            </tr>
+
+            <tr>
+              <td>SE</td>
+              <td>0.73</td>
+              <td>0.98</td>
+              <td>0.99</td>
+            </tr>
+           </table>
+         </p>
+
+        <br>
+        <br>
+
+        <!--Fourth Question of Investigation for the experiment-->
+        <p>
+  	       4. Provide one or two visualizations that show the distribution of the sample data. Write one or two sentences noting what you observe about the plot or plots.
+        </p>
+
+        <p class="answer">
+          <a><img src="chart.png" alt="Histogram of Colour Recognition Times"></a>
+          <br>
+          The bucket range of the congruent words condition data is 8 second to 23 seconds. The bucket range of the incongruent words condition data is 16 seconds to 36 seconds, i.e. noticeably above the congruent words condition data.
+
+        </p>
+        <br>
+        <br>
+
+        <!--Fifth Question of Investigation for the experiment-->
+        <p>
+  	       5. Now, perform the statistical test and report your results. What is your confidence level and your critical statistic value? Do you reject the null hypothesis or fail to reject it? Come to a conclusion in terms of the experiment task. Did the results match up with your expectations?
+        </p>
+
+        <p class="answer">
+          α = .01
+        </p>
+        <p class="answer">
+          df = 23
+        </p>
+        <p class="answer">
+          t<sub>crit</sub> = -2.50
+        </p>
+        <p class="answer">
+          t = -8.02
+        </p>
+        <p class="answer">
+          p-value = &#60; .0001
+        </p>
+        <p class="answer">
+          At the 99% confidence level (α = .01) and 23 degrees of freedom, the critical statistic value for a one-tailed test in the negative direction is -2.5. The calculated t-statistic for the difference in colour recognition time means of the congruent and incongruent word data is -8.02. Since the t-statistic is in the critical region, the null hypothesis is rejected. With the data presented, it is very unlikely that the 7.96 second difference in mean time for colour recognition for the congruent data vs. the incongruent data is obtained if the two means are actually the same (or if μ<sub>C</sub> > μ<sub>I</sub>). By conventional criteria, this difference is considered to be extremely statistically significant.
+        </p>
+        <p class="answer">
+          There is sufficient evidence at the α = .01 level of significance to support the claim that it takes less time to recognize the colour of words with the congruent condition compared to words with the incongruent condition.
+        </p>
+
+        <br>
+        <br>
+
+        <!--Sixth Question of Investigation for the experiment-->
+        <p>
+  	       6. Optional: What do you think is responsible for the effects observed? Can you think of an alternative or similar task that would result in a similar effect? Some research about the problem will be helpful for thinking about these two questions!
+        </p>
+        <p class="answer">
+  	       According to my analysis, the brain commands and tends to focus on reading the words, rather than interpret the color of the word. Usually to recognize the color, one has to stress himself and overcome this default activity performed by the brain which usually takes the time and hence a time delay occurs which causes the incongruent words to be read with more amount of time. Certain situations occur when the word is not interpreted properly and this requires the person to re-read the word and which in turn further increases the time
+
+        </p>
+        <p class="answer">
+          As a reult, we conclude that, in general, it takes less time to recognize the congruent words and more time to recognize the incongruent words. The potential reason for this is that the brain lays more focus on reading the word, rather than interpreting its color.
+        </p>
+
+        <p class="answer">
+          Numerical/Physical size Stroop tasks, where numerical values and physical size are the factors that contribute to congruency/incongruency, tend to have similar effects as well. It takes longer to recognize the number and physical size (two separate tasks) of small numbers that have a large physical size and large numbers that have a small physical size.<sup><a href="https://en.wikipedia.org/wiki/Numerical_Stroop_effect" target="_blank">Numerical Stroop Effect</a></sup>
+         </p>
+
+
+    </div>
+
+    <div class="container">
+      <h3>Sources</h3>
+        <ul>
+            <li><a href="http://blog.minitab.com/blog/adventures-in-statistics-2/understanding-t-tests-t-values-and-t-distributions">T-test Theory</a></li>
+            <li><a href="http://www.psychology.emory.edu/clinical/bliwise/Tutorials/TOM/meanstests/assump.htm">Assumptions made in the T-test</a></li>
+            <li><a href="https://statistics.laerd.com/statistical-guides/dependent-t-test-statistical-guide.php">Laerd Statistics: Dependent T-Test for Paired Samples</a></li>
+        </ul>
+        <br>
+        <br>
+        <br>
+        <h5 text-align:center> Connect with me on:</h5>
+                <div class="col-md-12 col-xs-12">
+                    <a href="https://www.facebook.com/pradnyesh.gumaste" class="btn btn-primary" role="button" target="_blank">
+                    Facebook
+                    </a>
+                    <a href="https://github.com/PradnyeshGumaste" class="btn btn-primary" role="button" target="_blank">
+                    GitHub
+                    </a>
+                    <a href="https://twitter.com/pradnyesh111" class="btn btn-primary" role="button" target="_blank">
+                    Twitter
+                    </a>
+                    <a href="https://www.linkedin.com/in/pradnyesh-gumaste-6b3939122/" class="btn btn-primary" role="button" target="_blank">
+                    LinkedIn
+                    </a>
+                    <a href="https://www.instagram.com/pradnyeshgumaste/?hl=en" class="btn btn-primary" role="button" target="_blank">
+                    Instagram
+                    </a>
+                </div>
+
+    </div>
+    <br>
+    <br>
+  </body>
+</html>
